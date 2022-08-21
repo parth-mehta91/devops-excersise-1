@@ -1,0 +1,15 @@
+pipeline {
+agent any 
+stages {
+stages ("master branch code") {
+steps {
+git 'https://github.com/parth-mehta91/devops-excersise-1.git'
+}
+}
+stages ("main branch code") {
+steps {
+git branch: 'main', url: 'https://github.com/parth-mehta91/devops-excersise-1.git'
+}
+}
+}
+}
