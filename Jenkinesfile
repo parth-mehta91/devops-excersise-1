@@ -11,5 +11,10 @@ steps {
 git branch: 'main', url: 'https://github.com/parth-mehta91/devops-excersise-1.git'
 }
 }
+stages ("build") {
+steps {
+bat "mvn clean install"
+}
+}
 }
 }
